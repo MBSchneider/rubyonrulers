@@ -34,8 +34,6 @@ module Rulers
 
       def self.all
         files = Dir["db/quotes/*.json"]
-        puts "ALL FILES ******"
-        puts files.map { |f| FileModel.new f }.to_s
         files.map { |f| FileModel.new f }
       end
 
@@ -88,8 +86,6 @@ TEMPLATE
             matching_files.push(self.find(i))
           end
         end
-        puts "MATCHING FILES ******"
-        puts matching_files.to_s
         return matching_files
       end
     end
